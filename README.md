@@ -15,14 +15,22 @@ Steps:
 
 
 ## install Prism Visual studio tools
+![](https://raw.githubusercontent.com/zeppaman/prism-wpf-tutorial/master/docs/2.install-plugin.png)
 ## Create a new Prism project
+![](https://raw.githubusercontent.com/zeppaman/prism-wpf-tutorial/master/docs/0.add_blank_app.png)
+![](https://raw.githubusercontent.com/zeppaman/prism-wpf-tutorial/master/docs/1.choose_di.png)
 ## Create Module
+![](https://raw.githubusercontent.com/zeppaman/prism-wpf-tutorial/master/docs/4.addmodule.png)
+
 ## Integrate modules
+
 ## Configure Prism project 
 
 ### Register modules
 
 ### Add missing dependency on modules
+![](https://raw.githubusercontent.com/zeppaman/prism-wpf-tutorial/master/docs/3.missingdependency.png)
+
 
 ### Register region from controls
 
