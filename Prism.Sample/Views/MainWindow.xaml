@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}" Height="350" Width="600" >
+        Title="{Binding Title}" Height="350" Width="600">
 
     <Window.Resources>
         <Style TargetType="TabItem">
@@ -12,24 +12,18 @@
     </Window.Resources>
 
     <DockPanel>
-
-
-
         <Border BorderBrush="Black"  BorderThickness="2" DockPanel.Dock="Top">
             <WrapPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Title}" />
-                <ContentControl prism:RegionManager.RegionName="HeaderRegion"/>
+                <ContentControl prism:RegionManager.RegionName="HeaderRegion" />
             </WrapPanel>
         </Border>
         <Border BorderBrush="Red" BorderThickness="2" DockPanel.Dock="Left" Width="300">
-         <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+            <ContentControl prism:RegionManager.RegionName="ContentRegion" />
         </Border>
-
-        <Border BorderBrush="Blue" BorderThickness="2" >
-            <TabControl prism:RegionManager.RegionName="TabRegion"  >
-                
+        <Border BorderBrush="Blue" BorderThickness="2">
+            <TabControl prism:RegionManager.RegionName="TabRegion">
             </TabControl>
         </Border>
-
     </DockPanel>
 </Window>

@@ -1,10 +1,10 @@
-﻿using Prism.Sample.Views;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using Prism.Modularity;
-using System.Windows;
 using Prism.Sample.Module1;
-using System;
 using Prism.Sample.Module2;
+using Prism.Sample.Views;
+using System;
+using System.Windows;
 
 namespace Prism.Sample
 {
@@ -17,10 +17,13 @@ namespace Prism.Sample
         {
             return Container.Resolve<MainWindow>();
         }
-        IModuleCatalog catalog;
+
+        private IModuleCatalog catalog;
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            catalog = this.CreateModuleCatalog();
+            //get a local module catalog (or create your own implementation and register)
+            catalog = CreateModuleCatalog();
             containerRegistry.RegisterInstance<IModuleCatalog>(catalog);
         }
 
@@ -28,7 +31,7 @@ namespace Prism.Sample
         {
             Type moduleCType = typeof(Module1Module);
 
-           
+            //Manually add here moduler, or use xml config, or directory loading
             catalog.AddModule<Module1Module>(InitializationMode.WhenAvailable);
             catalog.AddModule<Module2Module>(InitializationMode.WhenAvailable);
         }
